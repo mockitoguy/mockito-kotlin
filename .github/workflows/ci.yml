@@ -96,7 +96,7 @@ jobs:
       with:
         java-version: 8
 
-    - name: Build and release
+    - name: Build and release - testing
       run: ./gradlew tasks
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
