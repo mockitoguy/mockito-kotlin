@@ -67,7 +67,7 @@ jobs:
     - name: 3. Build with Kotlin ${{ matrix.kotlin }} and mock-maker ${{ matrix.mock-maker }}
       run: |
         ops/mockMakerInline.sh
-        ./gradlew build
+        ./gradlew tasks
       env:
         KOTLIN_VERSION: ${{ matrix.kotlin }}
         MOCK_MAKER: ${{ matrix.mock-maker }}
@@ -97,7 +97,7 @@ jobs:
         java-version: 8
 
     - name: Build and release
-      run: ./gradlew githubRelease publishToSonatype closeAndReleaseStagingRepository
+      run: ./gradlew tasks
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         NEXUS_TOKEN_USER: ${{secrets.NEXUS_TOKEN_USER}}
