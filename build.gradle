@@ -29,7 +29,7 @@ allprojects {
 tasks.named("generateChangelog") {
     previousRevision = scmVersion.previousVersion
     githubToken = System.getenv("GITHUB_TOKEN")
-    repository = "mockito/mockito-kotlin"
+    repository = "mockitoguy/mockito-kotlin"
     releaseTag = project.version
 }
 
