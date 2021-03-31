@@ -3,8 +3,6 @@
 
 A small library that provides helper functions to work with [Mockito](https://github.com/mockito/mockito) in Kotlin.
 
-test
-
 ## Install
 
 Mockito-Kotlin is available on Maven Central and JCenter.
