@@ -69,3 +69,11 @@ if (version.endsWith("-SNAPSHOT")) {
         enabled = false
     }
 }
+
+task detectVersion {
+    doLast {
+        def tag = "git describe --tags".execute().text.trim()
+        def found = tag.matches("\\d+\\.\\d+\\.\\d+")
+        println " *** Found tag: $found, exec result: [$tag]"
+    }
+}
